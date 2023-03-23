@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/v4-shims.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CUY</title>
+</head>
+<body>
+    <div class="connexion">
+        <div class="center-block">
+            <div class="cb-item">
+                <h1>Connexion</h1>
+                <p>Veuillez entrer les informations fournis par l'administrateur pour vous connecter.</p>
+                <div class="blck">
+                    <label for="nom">Nom</label>
+                    <input class="input" type="text" id="nom">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="blck">
+                    <label for="Motdepasse">Mot de passe</label>
+                    <input class="input" type="password" id="Motdepasse">
+                    <i class="fas fa-lock"></i>                
+                </div>
+                <button>connexion</button>
+            </div> 
+            <div class="cb-item">
+                <img id="js-moveimage" src="carte.png" alt="">
+                <div class="content-cbi">
+                    <div class="logo2"><img src="./logo.png" alt=""></div>
+                    <h1>CUY WEB <br> APP.</h1>
+                    <p>Communauté Urbaine de Yaoundé, Système GED(Gestion électronique des documents), GEC(Gestion électronique du courrier) & SAE(Service d'archivage électronique) en ligne. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script>
+        let image = document.getElementById("js-moveimage");
+        document.onmousemove = function (){
+            let x = event.clientX * 5 / window.innerWidth + "%";
+            let y = event.clientY * 5 / window.innerHeight + "%";
+
+            image.style.left = x;
+            image.style.top = y;
+        }
+    </script>
+</body>
+</html>
